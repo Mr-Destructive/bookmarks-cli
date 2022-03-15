@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 feedparser = "*"
 rich = "*"
+twine = "*"
 
 [dev-packages]
 

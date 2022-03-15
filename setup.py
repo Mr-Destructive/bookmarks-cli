@@ -7,7 +7,7 @@ VERSION = '0.1.0'
 PACKAGE_NAME = 'dailydotdev_bookmark_cli'
 AUTHOR = 'Meet Gor'
 AUTHOR_EMAIL = 'gormeet711@gmail.com'
-URL = 'https://github.com/Mr-Destructive/bookmark-cli'
+URL = 'https://github.com/Mr-Destructive/bookmarks-cli'
 
 DESCRIPTION = 'Get your Daily Dev bookmarks from CLI'
 README = (pathlib.Path(__file__).parent / "README.md").read_text(encoding="utf-8")
