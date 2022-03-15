@@ -26,10 +26,12 @@ setup(name=PACKAGE_NAME,
       author_email=AUTHOR_EMAIL,
       url=URL,
       install_requires=INSTALL_REQUIRES,
-      packages=find_packages()
-      )
-entry_points={
-    'console_scripts': [ 
-        'python bookmarks = dailydotdev_bookmark_cli.app:main' 
-    ] 
-},
+      packages=find_packages(),
+      entry_points={
+        'console_scripts': [ 
+        'bookmarks = dailydotdev_bookmark_cli.dailydotdev_bookmark_cli:main' 
+        ] 
+    },
+)
+
+

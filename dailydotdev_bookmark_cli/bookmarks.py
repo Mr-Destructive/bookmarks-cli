@@ -2,10 +2,10 @@ import feedparser
 from rich import print
 import os.path
 
-id_file = '.dailydevid.txt'
 
 def get_id():
 
+    id_file = '.dailydevid.txt'
     bookmark_id = ""
     if os.path.isfile(id_file):
         with open(id_file, 'r') as file:
@@ -22,6 +22,7 @@ def get_id():
 def get_bookmarks():
 
     daily_id = get_id()
+    id_file = '.dailydevid.txt'
 
     if daily_id:
         url = f"https://api.daily.dev/rss/b/{daily_id}"

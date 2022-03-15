@@ -1,1 +1,1 @@
-from main import *
+from dailydotdev_bookmark_cli import *
