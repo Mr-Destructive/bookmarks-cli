@@ -2,6 +2,8 @@ import feedparser
 from rich import print
 import os.path
 
+def trim_id(bookmark_id):
+    return bookmark_id.split('/')[-1]
 
 def get_id():
 
@@ -15,7 +17,7 @@ def get_id():
     if not bookmark_id:
         print("[green]Enter your-daily-dev bookmark feed url: ", end="")
         bookmark_id = input()
-        bookmark_id = bookmark_id.split('/')[-1]
+        bookmark_id = trim_id(bookmark_id)
 
     return bookmark_id
 
@@ -28,7 +30,7 @@ def get_bookmarks():
         url = f"https://api.daily.dev/rss/b/{daily_id}"
         feed = feedparser.parse(url)
 
-        if feed.feed:
+        if 'feed' in feed:
             with open(id_file, 'w') as file:
                 file.write(daily_id)
         name = feed.feed.title

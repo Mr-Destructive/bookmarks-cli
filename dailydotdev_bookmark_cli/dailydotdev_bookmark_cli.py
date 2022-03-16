@@ -1,8 +1,19 @@
 from .bookmarks import get_bookmarks
-import feedparser
+from .delete_dailyid import delete_id
+from .change_dailyid import change_id
 from rich import print
-import os.path
+import argparse 
 
 def main():
     print("[white]Daily Dot Dev Bookmark CLI[/white]")
-    get_bookmarks()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--rm', action='store_true') 
+    parser.add_argument('--ch', action='store_true') 
+    args = parser.parse_args() 
+
+    if args.rm:
+        delete_id()
+    elif args.ch:
+        change_id()
+    else:
+        get_bookmarks()
