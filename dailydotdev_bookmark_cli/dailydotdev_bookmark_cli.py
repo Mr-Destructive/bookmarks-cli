@@ -8,14 +8,12 @@ def main():
     print("[white]Daily Dot Dev Bookmark CLI[/white]")
     parser = argparse.ArgumentParser()
     parser.add_argument('--rm', action='store_true') 
-    parser.add_argument('--del', action='store_true') 
     parser.add_argument('--ch', action='store_true') 
-    parser.add_argument('--ed', action='store_true') 
     args = parser.parse_args() 
 
-    if args.rm or args.del:
+    if args.rm:
         delete_id()
-    elif args.ch or args.ed:
+    elif args.ch:
         change_id()
     else:
         get_bookmarks()
