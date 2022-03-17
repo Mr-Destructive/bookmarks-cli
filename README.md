@@ -1,13 +1,16 @@
 # Daily Dot Dev Bookmark's CLI
 
 - View your daily.dev bookmarks from the CLI with Python
+- A simple [Python Package](https://pypi.org/project/dailydotdev-bookmark-cli/)
 
 ## Installation
+
+### In a Python Environment
 
 To install the python package, install with pip or any other python package management tool of your choice.
 
 ```
-pip install dailydotdev-bookmarks-cli
+pip install dailydotdev-bookmark-cli
 ```
 
 After installing the python package simply enter the command `bookmarks`,
@@ -18,7 +21,34 @@ bookmarks
 
 This will prompt you to enter your daily.dev's bookmark RSS Feed URL, simply copy and paste as it is and finally the list of all your bookmarks will be displayed. 
 
+https://user-images.githubusercontent.com/40317114/158827491-974249eb-1e04-469b-b907-87a8b3a75b0f.mp4
+
 ![Daily Dev CLI](https://res.cloudinary.com/techstructive-blog/image/upload/v1647365911/blog-media/rf8nqohqu2k3orf4atso.gif)
+
+### With Docker
+
+Using the [Dockerfile](https://github.com/Mr-Destructive/bookmarks-cli/blob/main/Dockerfile), you can simply execute the following commands:
+
+```Dockerfile
+
+FROM python:3
+
+RUN pip install dailydotdev-bookmark-cli
+
+```
+
+Copy the Dockerfile in the your current working directory, build the image and run the image with interactive mode in bash.
+
+```
+docker build . -t bookmarkcli
+```
+
+```
+docker run -it bookmarkcli bash
+```
+
+https://user-images.githubusercontent.com/40317114/158831643-01a10a27-6e78-4a0a-a791-62f2ccee50e1.mp4
+
 
 ### Edit a Existing RSS Feed URL link(id)
 
