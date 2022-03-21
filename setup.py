@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.1.56'
+VERSION = '0.1.7'
 PACKAGE_NAME = 'dailydotdev_bookmark_cli'
 AUTHOR = 'Meet Gor'
 AUTHOR_EMAIL = 'gormeet711@gmail.com'

@@ -14,11 +14,8 @@ class Hover(Widget):
         bookmark_list = len(bookmarks)
         bookmark = bookmarks[random.randint(0, bookmark_list-1)]
         link = bookmark.link.split("?utm_source")[0].strip()
-            
         blog_base_link = link.split("/posts/")[0].strip().replace("app", "api") 
-            
         blog_id = link.split("/posts/")[1].strip()
-            
         blog_link = blog_base_link+"/r/"+blog_id
         return Panel(f"[green]{bookmark.title}[/]\n[link={blog_link}]{blog_link}[/link]", style=("on green" if self.mouse_over else ""))
 

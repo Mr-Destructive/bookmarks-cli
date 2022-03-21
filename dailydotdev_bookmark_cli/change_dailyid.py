@@ -7,7 +7,6 @@ def change_id():
     id_file = '.dailydevid.txt'
     
     with open(id_file, "r+") as f1:
-        
         new_id = input("Enter the new daily.dev RSS Feed URL: ")
         new_id = trim_id(new_id)
         contents = f1.read()
