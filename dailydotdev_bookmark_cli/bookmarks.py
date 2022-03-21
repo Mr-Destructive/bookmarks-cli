@@ -55,3 +55,19 @@ def get_bookmarks():
         print("[red]Please input a valid User ID!")
     input()
 
+
+def get_bookmarks_list():
+
+    daily_id = get_id()
+    id_file = '.dailydevid.txt'
+
+    if daily_id:
+        url = f"https://api.daily.dev/rss/b/{daily_id}"
+        feed = feedparser.parse(url)
+
+        if 'feed' in feed:
+            with open(id_file, 'w') as file:
+                file.write(daily_id)
+
+        bookmarks = feed.entries
+        return bookmarks

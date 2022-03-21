@@ -7,6 +7,7 @@ name = "pypi"
 feedparser = "*"
 rich = "*"
 twine = "*"
+textual = "*"
 
 [dev-packages]
 

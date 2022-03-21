@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.1.4'
+VERSION = '0.1.56'
 PACKAGE_NAME = 'dailydotdev_bookmark_cli'
 AUTHOR = 'Meet Gor'
 AUTHOR_EMAIL = 'gormeet711@gmail.com'
@@ -14,7 +14,8 @@ README = (pathlib.Path(__file__).parent / "README.md").read_text(encoding="utf-8
 
 INSTALL_REQUIRES = [
       'feedparser',
-      'rich'
+      'rich',
+      'textual'
 ]
 
 setup(name=PACKAGE_NAME,

@@ -21,6 +21,8 @@ bookmarks
 
 This will prompt you to enter your daily.dev's bookmark RSS Feed URL, simply copy and paste as it is and finally the list of all your bookmarks will be displayed. 
 
+**NOTE: You do not have to enter the bookmark URL link again and again, it will be stored in a file. If you want to change it, you can modify or delete the file containing the id as explained later.**
+
 https://user-images.githubusercontent.com/40317114/158827491-974249eb-1e04-469b-b907-87a8b3a75b0f.mp4
 
 ![Daily Dev CLI](https://res.cloudinary.com/techstructive-blog/image/upload/v1647365911/blog-media/rf8nqohqu2k3orf4atso.gif)
@@ -65,12 +67,19 @@ To delete an existing RSS Feed URL, you can enter the following command, this wi
 bookmakrs --rm
 ```
 
+### Terminal User Interface (using Textual and Rich)
+
+If you want a TUI for your bookmarks, you have a option to display it using the `--tui` option in the package. 
+
+**NOTE: It will only support the terminal systems with support the functionality of displaying rich content.**
+
+```
+bookmarks --tui
+```
+
 ## Dependencies 
 
 - [Feedparser](https://pypi.org/project/feedparser/)
 - [Rich](https://pypi.org/project/rich/)
-
-## TODO
-
-- Add a TUI to view articles
+- [Textual](https://pypi.org/project/textual/)
 
