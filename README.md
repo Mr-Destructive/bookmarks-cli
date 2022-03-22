@@ -1,5 +1,7 @@
 # Daily Dot Dev Bookmark's CLI
 
+[![PyPI version](https://badge.fury.io/py/dailydotdev-bookmark-cli.svg)](https://badge.fury.io/py/dailydotdev-bookmark-cli)
+
 - View your daily.dev bookmarks from the CLI with Python
 - A simple [Python Package](https://pypi.org/project/dailydotdev-bookmark-cli/)
 
